@@ -1,0 +1,3 @@
+A = load 'Customers.csv' using PigStorage (',') as (Acct_no,Acct_name,Address,City,State,ZIP);
+B = filter A by State matches 'CA';
+store B into 'Filtered';
